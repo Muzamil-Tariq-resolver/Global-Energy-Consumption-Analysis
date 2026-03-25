@@ -15,5 +15,5 @@ The objective is to generate meaningful insights into global energy usage and th
 ---
 
 ## Tools and Technologies
-- SQL (MySQL) – Data cleaning, transformation, and analytical queries  
+- SQL – Data cleaning, transformation, and analytical queries  
 - Tableau – Interactive dashboards and data visualization  
