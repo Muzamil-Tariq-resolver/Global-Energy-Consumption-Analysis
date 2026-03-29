@@ -1,5 +1,3 @@
-# Global Energy Analytics Pipeline
-
 ## Overview
 End-to-end data analytics for analyzing global energy consumption patterns across countries and over time. It combines SQL-based data transformation with Tableau visualizations to explore energy demand, carbon emissions, and the transition from fossil fuels to renewable energy sources.
 
