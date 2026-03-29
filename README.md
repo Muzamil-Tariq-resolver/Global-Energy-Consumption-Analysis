@@ -1,9 +1,9 @@
 # Global Energy Analytics Pipeline
 
 ## Overview
-This project presents an end-to-end data analytics pipeline for analyzing global energy consumption patterns across countries and over time. It combines SQL-based data transformation with Tableau visualizations to explore energy demand, carbon emissions, and the transition from fossil fuels to renewable energy sources.
+End-to-end data analytics for analyzing global energy consumption patterns across countries and over time. It combines SQL-based data transformation with Tableau visualizations to explore energy demand, carbon emissions, and the transition from fossil fuels to renewable energy sources.
 
-The project emphasizes a structured, data-driven approach to uncover trends, compare national energy systems, and evaluate sustainability through engineered metrics and interactive dashboards.
+Emphasizes a structured, data-driven approach to uncover trends, compare national energy systems, and evaluate sustainability through engineered metrics and interactive dashboards.
 
 ---
 
@@ -94,7 +94,7 @@ Provides comparative insights across countries:
 
 ---
 
-## Project Structure
+## Structure
 - SQL Scripts: Data cleaning, transformation, and feature engineering  
 - Tableau Dashboards: Interactive visualizations and insights  
 - Documentation: Project explanation and analytical findings   
