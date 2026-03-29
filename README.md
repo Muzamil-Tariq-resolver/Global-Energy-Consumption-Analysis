@@ -1,44 +1,100 @@
 # Global Energy Analytics Pipeline
 
 ## Overview
-This project presents an end-to-end data analytics pipeline to analyze global energy consumption patterns, compare fossil fuel and renewable energy usage, and explore country-level energy trends. The project focuses on data cleaning, transformation, and analytical querying using SQL, followed by interactive dashboard development in Tableau.
+This project presents an end-to-end data analytics pipeline for analyzing global energy consumption patterns across countries and over time. It combines SQL-based data transformation with Tableau visualizations to explore energy demand, carbon emissions, and the transition from fossil fuels to renewable energy sources.
 
-The objective is to generate meaningful insights into global energy usage and the transition toward renewable energy sources through structured data analysis and visualization.
+The project emphasizes a structured, data-driven approach to uncover trends, compare national energy systems, and evaluate sustainability through engineered metrics and interactive dashboards.
 
 ---
 
 ## Objectives
-* **Analyze** long-term global energy consumption trends.
-* **Compare** fossil fuel and renewable energy usage through engineered ratios.
-* **Identify** country-level differences in energy sector distribution.
-* **Evaluate** renewable energy adoption and carbon intensity across countries.
-* **Build** interactive dashboards for data exploration and insights.
+- Analyze long-term global energy consumption and emissions trends  
+- Compare renewable and fossil fuel usage using derived indicators  
+- Identify differences in sectoral energy distribution across countries  
+- Evaluate carbon intensity and energy efficiency at the country level  
+- Develop interactive dashboards to support data exploration and insight generation  
 
 ---
 
 ## Tools and Technologies
-* **SQL:** Data cleaning, schema management, and feature engineering.
-* **Tableau:** Interactive dashboards and data visualization.
+- SQL: Data cleaning, transformation, and feature engineering  
+- Tableau: Interactive dashboards and visual analytics  
 
 ---
 
 ## Dataset
-The dataset contains country-level energy consumption metrics across multiple years. Each row represents a country-year observation with various energy-related indicators.
+The dataset consists of country-level energy metrics observed over multiple years. Each record represents a country-year combination with key indicators related to energy consumption, emissions, and sectoral usage.
 
-### Features Description
-* **Country:** Name of the country.
-* **Year:** Year of observation.
-* **Total Energy Consumption (TWh):** Total energy consumed in terawatt-hours.
-* **Per Capita Energy Use (kWh):** Average energy consumption per person.
-* **Renewable Energy Share (%):** Percentage of total energy from renewable sources.
-* **Fossil Fuel Dependency (%):** Percentage of energy derived from fossil fuels.
-* **Industrial Energy Use (%):** Share of energy consumed by the industrial sector.
-* **Household Energy Use (%):** Share of energy consumed by households.
-* **Carbon Emissions (Million Tons):** Total carbon emissions produced.
-* **Energy Price Index (USD/kWh):** Average energy price per kilowatt-hour.
+### Feature Description
+- Country: Name of the country  
+- Year: Year of observation  
+- Total Energy Consumption (TWh): Total energy consumed  
+- Per Capita Energy Use (kWh): Average energy consumption per person  
+- Renewable Energy Share (%): Share of energy from renewable sources  
+- Fossil Fuel Dependency (%): Share of energy from fossil fuels  
+- Industrial Energy Use (%): Energy used by industry  
+- Household Energy Use (%): Energy used by households  
+- Carbon Emissions (MT): Total carbon emissions  
+- Energy Price (USD/kWh): Average energy cost  
 
-### Engineered Metrics
-To deepen the analysis, the following standardized columns were created using SQL:
-* **Other Sector %:** `100 - (Industrial % + Household %)` — Calculates non-industrial/non-household usage.
-* **Pollution Score:** `Carbon Emissions / Total Energy` — Measures carbon intensity.
-* **Green Dominance:** `Renewable Ratio / Fossil Ratio` — A ratio to identify leading "green" transition nations. 
+---
+
+## Feature Engineering
+To enhance analytical depth, additional metrics were derived using SQL:
+
+- Other Sector (%):  
+  `100 - (Industrial % + Household %)`  
+  Captures energy usage from transport, infrastructure, and other sectors  
+
+- Pollution Score (Carbon Intensity):  
+  `Carbon Emissions / Total Energy`  
+  Measures emissions produced per unit of energy  
+
+- Green Dominance:  
+  `Renewable Ratio / Fossil Ratio`  
+  Indicates whether renewable growth outpaces fossil fuel dependency  
+
+- Renewable Energy (TWh):  
+  `Total Energy * Renewable Ratio`  
+  Converts percentage share into absolute renewable energy output  
+
+- Year-over-Year Growth (%):  
+  Measures annual change in energy and renewable metrics to capture volatility  
+
+---
+
+## Dashboard Overview
+
+### 1. Global Trends Dashboard
+Focuses on time-based analysis of global energy systems:
+- Energy–Emissions Over Time  
+- Energy Growth (YoY)  
+- Decoupling Index  
+- Renewable Growth  
+
+### 2. Country-Level Analysis Dashboard
+Provides comparative insights across countries:
+- Carbon Intensity  
+- Green Dominance  
+- Energy by Sector  
+- Price vs Consumption  
+
+---
+
+## Key Insights
+
+- Global energy consumption is increasing steadily, but growth is non-linear and influenced by external factors  
+- The 2020 spike represents an abnormal surge, followed by stabilization in subsequent years  
+- High energy consumption does not necessarily imply high emissions efficiency; significant variation exists across countries  
+- Renewable energy adoption is progressing globally, with no single country dominating the transition  
+- Industrial activity is the primary driver of energy demand across all analyzed countries  
+- Energy growth is highly volatile, with clear cycles of decline and recovery  
+- Larger economies tend to exhibit higher energy volatility compared to more stable systems  
+- Recent trends show periods where emissions are rising faster than energy consumption, indicating continued reliance on fossil fuels  
+
+---
+
+## Project Structure
+- SQL Scripts: Data cleaning, transformation, and feature engineering  
+- Tableau Dashboards: Interactive visualizations and insights  
+- Documentation: Project explanation and analytical findings   
