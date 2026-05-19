@@ -122,7 +122,7 @@ GROUP BY year
 ORDER BY year;
 
 -- =====================================================
--- Year-over-Year Energy Growth (Trend Strength)
+-- YEAR-OVER-YEAR ENERGY GROWTH (TREND STRENGHT)
 -- =====================================================
 SELECT 
     year,
@@ -135,7 +135,7 @@ GROUP BY year
 ORDER BY year;
 
 -- =====================================================
--- Countries with Fastest Renewable Growth
+-- COUNTRIES WITH FASTEST RENEWABLE GROWTH
 -- =====================================================
 SELECT 
     country,
@@ -148,7 +148,7 @@ ORDER BY growth DESC
 LIMIT 10;
 
 -- =====================================================
--- Sector Dominance Classification
+-- SECTOR DOMINANCE CLASSIFICATION
 -- =====================================================
 SELECT 
     country,
@@ -164,7 +164,7 @@ FROM cleaned_energy_data
 GROUP BY country;
 
 -- =====================================================
--- Country Energy Volatility Ranking
+-- COUNTRY ENERGY VOLATILITY RANKING
 -- =====================================================
 WITH country_yearly AS (
     SELECT 
@@ -182,7 +182,7 @@ FROM country_yearly
 GROUP BY country;
 
 -- =====================================================
--- Decoupling Index (Energy vs Emissions)
+-- DECOUPLING INDEX (Energy vs Emissions)
 -- =====================================================
 WITH yearly_data AS (
     SELECT 
